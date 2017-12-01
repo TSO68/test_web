@@ -19,10 +19,10 @@
 		public static function getInstance(){
 			if( Connexion :: $monPdo == null){
 				try{
-					$serveur='localhost';
-					$bdd='slam';
+					$serveur='mysql:host=localhost';
+					$bdd='dbname=slam';
 					$user='root';
-					$mdp='root';
+					$mdp='';
 					Connexion::$monPdo = new PDO($serveur.';'.$bdd, $user,$mdp);
 					Connexion::$monPdo->query("SET CHARACTER SET utf8");
 				}catch (PDOException $e){
