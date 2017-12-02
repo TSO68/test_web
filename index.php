@@ -92,36 +92,25 @@ session_start();
 				else {
 					switch($_GET['do']){
 						//exemple
-						case 'joueurs':{
-							include("Controleur/ctrl_liste_joueurs.php");
+						case 'recettes':{
+							include("Controleur/ctrl_liste_recettes.php");
 							break;
 						}
-						case 'detail':{
-							include("Controleur/ctrl_detail_joueur.php");
+						case 'recherche':{
+							include("Controleur/ctrl_recherche.php");
 							break;
 						}
-						case 'staffs':{
-							include("Controleur/ctrl_liste_staff.php");
-							break;
-						}
-						case 'detailStaff':{
-							include("Controleur/ctrl_detail_staff.php");
-							break;
-						}
-						case 'stade':{
-							include("Vue/vue_stade.php");
+						case 'planning':{
+							include("Controleur/ctrl_planning.php");
 							break;
 						}
 						case 'contacts':{
 							include("Vue/vue_contacts.php");
 							break;
 						}
-						case 'matchs':{
-							include("Controleur/ctrl_liste_matchs.php");
-							break;
-						}
-						case 'detailsMatch':{
-							include("Controleur/ctrl_detail_match.php");
+						case 'compte':{
+
+							include("Controleur/ctrl_compte.php");
 							break;
 						}
 						case 'inscription':{
@@ -129,39 +118,14 @@ session_start();
 							include("Controleur/ctrl_inscription.php");
 							break;
 						}
-						case 'connexionMembre':{
+						case 'connexion':{
 
-							include("Controleur/ctrl_connexion_membre.php");
+							include("Controleur/ctrl_connexion.php");
 							break;
 						}
 						case 'deconnexion':{
 
 							include("Controleur/ctrl_deconnexion.php");
-							break;
-						}
-						case 'boutique':{
-
-							include("Controleur/ctrl_liste_produits.php");
-							break;
-						}
-						case 'detailProduit':{
-							include("Controleur/ctrl_detail_produit.php");
-							break;
-						}
-						case 'panier':{
-							include("Controleur/ctrl_fonction_panier.php");
-							break;
-						}
-						case 'traitementCommandes':{
-							include("Controleur/ctrl_traitement_commandes.php");
-							break;
-						}
-						case 'espaceMembre':{
-							include("Controleur/ctrl_commandes_utilisateur.php");
-							break;
-						}
-						case 'facture':{
-							include("Controleur/ctrl_traitement_facture.php");
 							break;
 						}
 					}

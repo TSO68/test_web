@@ -7,9 +7,12 @@
 					<tr>
 						<td width='30%'>
 							<div style="margin-left : 5%;">
-								Site réalisé dans le cadre des projets à présenter en deuxième année de BTS SIO
+								Site réalisé dans le cadre du projet Web de L3 Informatique
 								<br/>
-								<strong>HAUSHERR Victor, KAMMERER Timothée, KANAWATI Samy</strong>
+								<strong>HAUSHERR Victor</strong>
+								<br/>
+								<strong>KANAWATI Samy</strong>
+								
 							</div>
 						</td>
 							
@@ -23,9 +26,9 @@
 							<!--Localisation de la société-->
 							<br>
 							<address style="margin-left : 45%; margin-right : 5%">
-								FC SIO<br/>
-								42 avenue de l'Europe<br/>
-								68000 Colmar Cedex<br/>
+								UNISTRA<br/>
+								7 Rue René Descartes<br/>
+								67084 Strasbourg<br/>
 							</address>
 						</td>
 					</tr>
