@@ -25,17 +25,11 @@
 		//on utilise ici la technique des requêtes préparées qui permettent d'éviter les injonctions SQL
 		public function findById($idRecette){
 			//je reçois ma requête SQL
-			$req = "SELECT recette.nom, descriptif, difficulte, prix, nbPersonnes, dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, qteProtides, utilisateur.nom, utilisateur.prenom, illustration.adresse, ingredient.nom
+			$req = "SELECT nom, descriptif, difficulte, prix, nbPersonnes, adresse
 					FROM recette 
-					INNER JOIN utilisateur
-					ON recette.idUtil = utilisateur.idUtil
 					INNER JOIN illustration
-					ON recette.idRec = illustration.idRec;
-					INNER JOIN contenu
-					ON recette.idRec = contenu.idRec
-					(INNER JOIN ingredient
-					ON contenu.idIngre = ingredient.idIngre)
-					GROUP BY recette.nom, descriptif, difficulte, prix, nbPersonnes, dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, qteProtides, utilisateur.nom, utilisateur.prenom, illustration.adresse";
+					ON recette.idRec = illustration.idRec
+                    WHERE recette.idRec = :id";
 			
 			//je prépare ma requête
 			$prep = $this->cx->prepare($req);

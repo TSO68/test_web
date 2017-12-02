@@ -96,6 +96,10 @@ session_start();
 							include("Controleur/ctrl_liste_recettes.php");
 							break;
 						}
+						case 'detail':{
+							include("Controleur/ctrl_detail_recette.php");
+							break;
+						}
 						case 'recherche':{
 							include("Controleur/ctrl_recherche.php");
 							break;
