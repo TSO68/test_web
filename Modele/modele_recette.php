@@ -10,7 +10,7 @@
 		
 		//Retourne un curseur contenant toutes les recettes
 		public function readAll(){
-			$req = "SELECT recette.idRec, recette.nom, descriptif, difficulte, prix, nbPersonnes, dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, utilisateur.nom, utilisateur.prenom, illustration.adresse
+			$req = "SELECT recette.idRec, recette.nom AS lib, descriptif, difficulte, prix, nbPersonnes, dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, utilisateur.nom, utilisateur.prenom, illustration.adresse
 					FROM recette 
 					INNER JOIN utilisateur
 					ON recette.idUtil = utilisateur.idUtil

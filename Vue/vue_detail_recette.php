@@ -10,6 +10,7 @@
 						<div style=\"margin-left:18%; margin-right:37%;\">
 							<h3 style=\"font-size:30px; font-weight:900; margin-top: 0px; margin-bottom: 7px; color:#db1111;\">".$uneRecette->nom."</h3> 
 							<h3 style=\"font-weight:700; margin-top: 0px; margin-bottom: 7px;\">".$uneRecette->difficulte."</h3>
+							<h3 style=\"font-weight:700; margin-top: 0px; margin-bottom: 7px;\">".$uneRecette->prix."</h3>
 							<h3 style=\"margin-top: 0px; margin-bottom: 7px; font-size:20px\">".$uneRecette->nbPersonnes."</h3>		
 						</div>
 					</div>
