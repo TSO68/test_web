@@ -50,7 +50,7 @@
 			$prep->execute();
 			
 			//je rempli le curseur
-			$curseur = $prep->fetchObject();
+			$curseur = $prep->fetchAll();
 			return $curseur;
 		}
 	}

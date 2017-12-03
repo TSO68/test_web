@@ -1,10 +1,13 @@
 <?php
 	require_once ("Modele/modele_recette.php");
+	require_once ("Modele/modele_ingredient.php");
 	
 	$r=new Recette();
+	$i=new Ingredient();
 	
 	//Je récupère tous les objets
 	$uneRecette=$r->findById($_GET['idRecette']);
+	$unIngredient=$i->findIng($_GET['idRecette']);
 	
 	if($uneRecette != null){
 	    //je passe la main à la vue

@@ -10,7 +10,9 @@
 		
 		//Retourne un curseur contenant toutes les recettes
 		public function readAll(){
-			$req = "SELECT recette.idRec, recette.nom AS lib, descriptif, difficulte, prix, nbPersonnes, dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, utilisateur.nom, utilisateur.prenom, illustration.adresse
+			$req = "SELECT recette.idRec, recette.nom AS lib, descriptif, difficulte, prix, nbPersonnes, 
+					dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, 
+					utilisateur.nom, utilisateur.prenom, illustration.adresse
 					FROM recette 
 					INNER JOIN utilisateur
 					ON recette.idUtil = utilisateur.idUtil
@@ -25,11 +27,19 @@
 		//on utilise ici la technique des requêtes préparées qui permettent d'éviter les injonctions SQL
 		public function findById($idRecette){
 			//je reçois ma requête SQL
-			$req = "SELECT nom, descriptif, difficulte, prix, nbPersonnes, adresse
+			$req = "SELECT recette.nom AS libRec, descriptif, difficulte, prix, nbPersonnes, 
+					dureePreparation, dureeCuisson, dureeTotale, recette.qteCalories AS cal, recette.qteProteines AS prot, recette.qteGlucides AS glu, recette.qteLipides AS lip,
+					utilisateur.nom AS utilNom, utilisateur.prenom, illustration.adresse
 					FROM recette 
+					INNER JOIN utilisateur
+					ON recette.idUtil = utilisateur.idUtil
 					INNER JOIN illustration
 					ON recette.idRec = illustration.idRec
-                    WHERE recette.idRec = :id";
+					INNER JOIN contenu
+					ON recette.idRec = contenu.idRec
+					INNER JOIN ingredient
+					ON contenu.idIngre = ingredient.idIngre
+					WHERE recette.idRec = :id";
 			
 			//je prépare ma requête
 			$prep = $this->cx->prepare($req);
@@ -40,7 +50,7 @@
 			//j'exécute
 			$prep->execute();
 			
-			//je rempli le curseur
+			//je remplis le curseur
 			$curseur = $prep->fetchObject();
 			return $curseur;
 		}
