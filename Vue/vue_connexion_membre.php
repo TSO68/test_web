@@ -3,7 +3,7 @@
         <!--Contenu de la page-->
         <div id='content'>
 			<h3 class="coord">Vous êtes inscrit sur notre site? Veuillez vous connecter ci-dessous<h3>
-			<form action="index.php?do=connexionMembre&mem=true" method="POST">
+			<form action="index.php?do=connexion&mem=true" method="POST">
 				<div style="overflow-x:auto;">
 					<table style="width:40%; border-collapse: separate; border-spacing: 30;">
 						<tr>

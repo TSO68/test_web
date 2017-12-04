@@ -8,9 +8,9 @@
 			
 			if(isset($_GET['mem']))
 			{
-				$Existe=$cm->existe();
+				$existe=$cm->existe();
 				$login= $_POST['login_connexion'];//identifiant de connexion
-				if($Existe==1)
+				if($existe==1)
 				{
 					$uneLigne=$cm->connection();
 				}
@@ -20,7 +20,7 @@
 					echo"<script> alert ('Login ou Mot De Passe Incorrect !');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'index.php?do=connexionMembre';");
+					print ("location.href = 'index.php?do=connexion';");
 					print ("</script>");
 				}
 			}

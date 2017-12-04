@@ -124,7 +124,7 @@ session_start();
 						}
 						case 'connexion':{
 
-							include("Controleur/ctrl_connexion.php");
+							include("Controleur/ctrl_connexion_membre.php");
 							break;
 						}
 						case 'deconnexion':{

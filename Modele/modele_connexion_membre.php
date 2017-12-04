@@ -16,7 +16,7 @@
 			$pass=md5($_POST['pass_connexion']);//mot de passe de connexion
 
 			//requete SQL récupérant toutes les informations sur l'utilisateur
-			$reqSQL="SELECT * FROM COMPTE WHERE mail=:login AND mdp=:pass";
+			$reqSQL="SELECT * FROM utilisateur WHERE login=:login AND mdp=:pass";
 			$unLogin = $this->cx->prepare($reqSQL);
 			
 			//j'associe les paramètres	
@@ -42,7 +42,7 @@
 			$pass=md5($_POST['pass_connexion']);//mot de passe de connexion
 
 			//requete SQL récupérant toutes les informations sur l'utilisateur
-			$reqSQL="SELECT * FROM COMPTE WHERE mail=:login AND mdp=:pass";
+			$reqSQL="SELECT * FROM utilisateur WHERE login=:login AND mdp=:pass";
 			$unLogin = $this->cx->prepare($reqSQL);
 			
 			//j'associe les paramètres	
@@ -60,10 +60,10 @@
 			
 			if ($_SESSION['userLog']==1)//si la requete renvoie une ligne
 			{
-				$_SESSION['login']=$uneLigne->mail; //on stock l'identifiant dans une variable de session (C'EST CETTE VARIABLE QUI, SI ELLE EST NON VIDE, SIGNIFIE QUE L'ON EST CONNECTE)
-				$_SESSION['id']=$uneLigne->id;
+				$_SESSION['login']=$uneLigne->login; //on stock l'identifiant dans une variable de session (C'EST CETTE VARIABLE QUI, SI ELLE EST NON VIDE, SIGNIFIE QUE L'ON EST CONNECTE)
+				$_SESSION['idUtil']=$uneLigne->idUtil;
 				
-				header("Location:index.php?do=espaceMembre");
+				header("Location:index.php");
 			}
 		}
 	}
