@@ -24,10 +24,10 @@
 							<ul class="dropdown-menu">
 							  <li><a href="index.php?do=recettes" title="Liste">&nbsp;Liste des recettes&nbsp;</a></li>
 							  <li><a href="index.php?do=recherche" title="Recherche">&nbsp;Rechercher une recette&nbsp;</a></li>
+							  <li><a href="index.php?do=ajout" title="Ajouter">&nbsp;Ajouter une recette&nbsp;</a></li>
 							</ul>
 					</li>
 					<li><a href="index.php?do=planning" title="Planning">&nbsp;Planning&nbsp;</a></li>
-					<li><a href="index.php?do=contacts" title="Contacts">&nbsp;Contacts&nbsp;</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index.php?do=admin" title="Administration"> <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Administration&nbsp;</a></li>

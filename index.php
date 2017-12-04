@@ -104,6 +104,10 @@ session_start();
 							include("Controleur/ctrl_recherche.php");
 							break;
 						}
+						case 'ajout':{
+							include("Controleur/ctrl_ajout_recette.php");
+							break;
+						}
 						case 'planning':{
 							include("Controleur/ctrl_planning.php");
 							break;
