@@ -23,21 +23,21 @@
 							<tr>
 								<td class="coord">Difficulté :</td>
 								<td><select name="difficulte" id="difficulte">
-										<option value="tfa">Très facile</option>
-										<option value="fac">Facile</option>
-										<option value="moy">Moyen</option>
-										<option value="dif">Difficile</option>
+										<option value="Très facile">Très facile</option>
+										<option value="Facile">Facile</option>
+										<option value="Moyen">Moyen</option>
+										<option value="Difficile">Difficile</option>
 									</select></td>
 							</tr>
 		
 							<tr>
 								<td class="coord">Prix :</td>
 								<td><select name="prix" id="prix">
-										<option value="un">1</option>
-										<option value="deux">2</option>
-										<option value="trois">3</option>
-										<option value="quatre">4</option>
-										<option value="cinq">5</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
 									</select></td>
 							</tr>
 		

@@ -32,8 +32,8 @@
 			{
 				?>		
 				<script type="text/javascript">
-					alert('Veuillez remplir les champs afin de vous inscrire');
-					location.href = 'index.php?do=inscription';
+					alert('Veuillez remplir les champs afin de mettre une recette');
+					location.href = 'index.php?do=ajout';
 				</script>
 				<?php
 			}
