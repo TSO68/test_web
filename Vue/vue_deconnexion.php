@@ -1,3 +1,3 @@
 <?php
-	header("Location:index.php?do=connexionMembre");
+	header("Location:index.php?do=connexion");
 ?>

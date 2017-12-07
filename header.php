@@ -30,7 +30,7 @@
 					<li><a href="index.php?do=planning" title="Planning">&nbsp;Planning&nbsp;</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php?do=admin" title="Administration"> <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Administration&nbsp;</a></li>
+					<li><a href="index.php?do=admin" title="Administration">&nbsp;Administration&nbsp;</a></li>
 					<li><a href="index.php?do=compte" title="Compte"> <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Mon compte&nbsp;</a></li>
 					<li><a href="index.php?do=deconnexion" title="Déconnexion"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Déconnexion&nbsp;</a></li>
 				</ul>

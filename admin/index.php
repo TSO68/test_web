@@ -133,7 +133,7 @@ session_start();
 						}
 						case 'deconnexion':{
 
-							include("Controleur/ctrl_deconnexion.php");
+							include("Controleur/ctrl_deconnexion_admin.php");
 							break;
 						}
 						case 'admin':{
