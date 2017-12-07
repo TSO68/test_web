@@ -57,6 +57,11 @@
 							</tr>    
 					
 							<tr>
+								<td class="coord">URL de l'illustration :</td>
+								<td><input type="text" class="form-control" name="adresse" id="adresse"></td>
+							</tr>  
+							
+							<tr>
 								<td colspan="2" align="right">
 									<input type="submit" class="btn btn-default" value="Envoyer" id="envoyer" style="width: 25%; min-width: 80px;">
 									<input type="reset" class="btn btn-default" value="Annuler" style="width: 15%; min-width: 65px;">
