@@ -8,7 +8,7 @@
 					$id=$unUser->idUtil;
 					$prenom=$unUser->prenom;
 					$nom=$unUser->nom;
-					echo'<option value="'.$id.'">'.$id.' '.$nom.'</option>';
+					echo'<option value="'.$id.'">'.$prenom.' '.$nom.'</option>';
 				}
 				echo "</select>";
 			?>
