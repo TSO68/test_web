@@ -49,12 +49,13 @@
 			return $curseur;
 		}
 		
-		public function deleteUtilisateur(){
+		public function deleteUtilisateur($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;
 		  
 			//récupération des valeurs des champs:
-			$id=$_POST['util'];
+			//$id=intval($_POST['util']);
+			
 			//création de la requête SQL:
 			$sql="DELETE FROM utilisateur WHERE idUtil=:id";
 			
