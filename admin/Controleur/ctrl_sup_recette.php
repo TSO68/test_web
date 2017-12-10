@@ -7,7 +7,7 @@
 		
 		if($_POST != null)
 			{		
-				$delRec=$r->deleteRecette($_POST['util']);
+				$delRec=$r->deleteRecette($_POST['rec']);
 				
 				if($delRecette)
 				{
