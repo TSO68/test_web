@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Administration du projet-recettes.tk</title>
-<link rel="stylesheet" href="../css/suputil.css">
+<link rel="stylesheet" href="../css/sup.css">
 </head>
 <?php 
 //Teste si c'est bien l'administrateur qui est enregistré 
