@@ -1,20 +1,20 @@
 <?php
-		require ("../Modele/modele_recette.php");
+		require ("Modele/modele_sup_ingredient.php");
 		
-		$r= new Recette();
+		$i= new Ingredient();
 		
-		$lesRecettes=$r->readAll();
+		$lesIngredients=$i->readAll();
 		
 		if($_POST != null)
 			{		
-				$delRec=$r->deleteRecette($_POST['rec']);
+				$delIngre=$i->deleteIngre($_POST['ingre']);
 				
-				if($delRec)
+				if($delIngre)
 				{
-					echo"<script> alert ('Recette supprimée');</script>";
+					echo"<script> alert ('Ingrédient supprimé');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'ctrl_sup_recette.php';");
+					print ("location.href = 'admin.php?do=sup_ingredient';");
 					print ("</script>");
 				}
 				else
@@ -22,10 +22,10 @@
 					echo"<script> alert('Echec de la suppression');</script>";
 					// et redirection vers la page d'inscription
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'ctrl_sup_recette.php';");
+					print ("location.href = 'admin.php';");
 					print ("</script>");				
 				}
 			}
 	
-		include("../Vue/vue_sup_recette.php");
+		include("Vue/vue_sup_ingredient.php");
 ?>	

@@ -1,20 +1,20 @@
 <?php
-		require ("../Modele/modele_recette.php");
+		require ("Modele/modele_sup_utilisateur.php");
 		
-		$r= new Recette();
+		$u= new Utilisateur();
 		
-		$lesRecettes=$r->readAll();
+		$lesUsers=$u->readAll();
 		
 		if($_POST != null)
 			{		
-				$delRec=$r->deleteRecette($_POST['rec']);
+				$updUser=$u->updateUtilisateur($_POST['util']);
 				
-				if($delRec)
+				if($updUser)
 				{
-					echo"<script> alert ('Recette supprimée');</script>";
+					echo"<script> alert ('Utilisateur modifié');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'ctrl_sup_recette.php';");
+					print ("location.href = 'admin.php?do=modif_utilisateur';");
 					print ("</script>");
 				}
 				else
@@ -22,10 +22,10 @@
 					echo"<script> alert('Echec de la suppression');</script>";
 					// et redirection vers la page d'inscription
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'ctrl_sup_recette.php';");
+					print ("location.href = 'admin.php';");
 					print ("</script>");				
 				}
 			}
 	
-		include("../Vue/vue_sup_recette.php");
+		include("Vue/vue_modif_utilisateur.php");
 ?>	
