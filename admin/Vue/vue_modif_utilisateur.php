@@ -31,8 +31,18 @@
 				echo "</select>";
 				echo '<label for="prenom_modif">Prénom</label>
 					<input type="text" class="form-control" id="prenom_modif" name="prenom_modif"/>
+					
 					<label for="nom_modif">Nom</label>
-					<input type="text" class="form-control" id="nom_modif" name="nom_modif"/>';
+					<input type="text" class="form-control" id="nom_modif" name="nom_modif"/>
+					
+					<label for="login_modif">Login</label>
+					<input type="text" class="form-control" id="login_modif" name="login_modif"/>
+					
+					<label for="mail_modif">E-mail</label>
+					<input type="email" class="form-control" id="mail_modif" name="mail_modif"/>
+					
+					<label for="mdp_modif">Mot de passe</label>
+					<input type="password" class="form-control" id="mdp_modif" name="mdp_modif"/>';
 			?>
 			<p>
 				<input type="submit" class="btn btn-default" value="Modifier" id="envoyer" />

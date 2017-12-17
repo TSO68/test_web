@@ -6,22 +6,33 @@
 		$lesUsers=$u->readAll();
 		
 		if($_POST != null)
-		{	
-			if($_POST['prenom_modif'] != "" && $_POST['nom_modif'] != "")
-			{
-				$upd=$u->updatePrenom($_POST['util']);
-				$updNom=$u->updateNom($_POST['util']);
-			}
-			elseif($_POST['prenom_modif'] != "")
+		{
+			if($_POST['prenom_modif'] != "")
 			{
 				$upd=$u->updatePrenom($_POST['util']);
 			}
-			elseif($_POST['nom_modif'] != "")
+			
+			if($_POST['nom_modif'] != "")
 			{
-				$upd=$u->updateNom($_POST['util']);
+				$upd2=$u->updateNom($_POST['util']);
+			}
+			
+			if($_POST['login_modif'] != "")
+			{
+				$upd3=$u->updateLogin($_POST['util']);
+			}
+			
+			if($_POST['mail_modif'] != "")
+			{
+				$upd4=$u->updateMail($_POST['util']);
+			}
+			
+			if($_POST['mdp_modif'] != "")
+			{
+				$upd5=$u->updateMdp($_POST['util']);
 			}
 				
-			if($upd || $updNom)
+			if($upd || $upd2 || $upd3 || $upd4 || $upd5)
 			{
 				echo"<script> alert ('Utilisateur modifié');</script>";
 				// et redirection vers la page d'accueil

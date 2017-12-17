@@ -25,12 +25,13 @@
 							  <li><a href="index.php?do=recettes" title="Liste">&nbsp;Liste des recettes&nbsp;</a></li>
 							  <li><a href="index.php?do=recherche" title="Recherche">&nbsp;Rechercher une recette&nbsp;</a></li>
 							  <li><a href="index.php?do=ajout" title="Ajouter">&nbsp;Ajouter une recette&nbsp;</a></li>
+							  <li><a href="index.php?do=ajout_ingredient" title="Ajouter ingrédient">&nbsp;Ajouter un ingrédient à une recette&nbsp;</a></li>
 							</ul>
 					</li>
 					<li><a href="index.php?do=planning" title="Planning">&nbsp;Planning&nbsp;</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php?do=admin" title="Administration">&nbsp;Administration&nbsp;</a></li>
+					<li><a href="admin.htm" title="Administration">&nbsp;Administration&nbsp;</a></li>
 					<li><a href="index.php?do=compte" title="Compte"> <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Mon compte&nbsp;</a></li>
 					<li><a href="index.php?do=deconnexion" title="Déconnexion"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Déconnexion&nbsp;</a></li>
 				</ul>

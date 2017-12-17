@@ -104,8 +104,16 @@ session_start();
 							include("Controleur/ctrl_recherche.php");
 							break;
 						}
+						case 'resultats':{
+							include("Vue/vue_resultats.php");
+							break;
+						}
 						case 'ajout':{
 							include("Controleur/ctrl_ajout_recette.php");
+							break;
+						}
+						case 'ajout_ingredient':{
+							include("Controleur/ctrl_ajout_ingredient.php");
 							break;
 						}
 						case 'planning':{

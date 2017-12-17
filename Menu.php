@@ -26,6 +26,7 @@
 			  <li><a href="index.php?do=planning" title="Saison">&nbsp;Planning&nbsp;</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="admin.htm" title="Administration">&nbsp;Administration&nbsp;</a></li>
 			  <li><a href="index.php?do=inscription" title="Inscription"><span class="glyphicon glyphicon-user"></span>&nbsp;Inscription&nbsp;</a></li>
 			  <li><a href="index.php?do=connexion" title="Connexion"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Connexion&nbsp;</a></li>
 			</ul>

@@ -58,6 +58,23 @@
 			return $valid;
 		}
 		
+		public function updateNom($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$nom=$_POST['nom_modif'];
+			$sql="UPDATE utilisateur SET nom=:nom WHERE idUtil=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
 		public function updatePrenom($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;
@@ -75,14 +92,48 @@
 			return $valid;
 		}
 		
-		public function updateNom($id){
+		public function updateLogin($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;
 			
-			$nom=$_POST['nom_modif'];
-			$sql="UPDATE utilisateur SET nom=:nom WHERE idUtil=:id";
+			$login=$_POST['login_modif'];
+			$sql="UPDATE utilisateur SET login=:login WHERE idUtil=:id";
 			$requete = $this->cx->prepare($sql);				
-			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
+			$requete->bindValue(":login",$login,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateMail($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$mail=$_POST['mail_modif'];
+			$sql="UPDATE utilisateur SET mail=:mail WHERE idUtil=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":mail",$mail,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateMdp($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$mdp=md5($_POST['mdp_modif']);
+			$sql="UPDATE utilisateur SET mdp=:mdp WHERE idUtil=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":mdp",$mdp,PDO::PARAM_STR);
 			$requete->bindValue(":id",$id,PDO::PARAM_INT);
 			$requete->execute();
 			

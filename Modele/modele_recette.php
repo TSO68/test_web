@@ -4,7 +4,7 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("Modele/modele_connexion_base.php");
+			require_once("modele_connexion_base.php");
 			$this->cx = Connexion::getInstance();
 		}
 		
@@ -46,6 +46,25 @@
 			
 			//j'associe les paramètres
 			$prep->bindValue(':id', $idRecette, PDO::PARAM_STR);
+			
+			//j'exécute
+			$prep->execute();
+			
+			//je remplis le curseur
+			$curseur = $prep->fetchObject();
+			return $curseur;
+		}
+		
+		public function search($recherche){			
+			$req = 'SELECT nom
+					FROM recette 
+					WHERE nom LIKE "%:recherche%"';
+			
+			//je prépare ma requête
+			$prep = $this->cx->prepare($req);
+			
+			//j'associe les paramètres
+			$prep->bindValue(':recherche', $recherche, PDO::PARAM_STR);
 			
 			//j'exécute
 			$prep->execute();
