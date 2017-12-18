@@ -120,6 +120,10 @@ session_start();
 							include("Controleur/ctrl_planning.php");
 							break;
 						}
+						case 'plan':{
+							include("Controleur/ctrl_detail_planning.php");
+							break;
+						}
 						case 'contacts':{
 							include("Vue/vue_contacts.php");
 							break;
